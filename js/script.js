@@ -44,16 +44,45 @@ input_box.addEventListener("keydown", function(event){
  
  
     };
-//  var random_word=function(event){
-//      var mixed_words;
-//      mixed_words=words[Math.round(Math.random()*words.length)];
-//      for(var i=0; i<)
-//  };  
+var random_bar=document.createElement("input");;
+var mixed_words=[   
+    "hit",
+    "low",
+    "you",
+    "hot",
+    "get"
+    ];
+var shuffle=function(shufflewords){
+    var words = new Array;
+    for(var i=0; i<mixed_words.length; i++){
+        
+    var letter_array; //= mixed_words[i].split('');
+       
+     letter_array=mixed_words[i].split('').sort();
+     console.log(letter_array);
+  
+     
+     //console.log(letter_array);
+     //letter_array[i] = Math.round(Math.random()*letter_array[i]);
+      
+     // return letter_array;
+      
+    };
+};
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function(event){
+    
+    shuffle();
+    
+ document.body.appendChild(random_bar);
  document.body.appendChild(input_box);
     input_box.placeholder="Enter 3 letter words";
  document.body.appendChild(words_ul);
-    // words_ul.appendChild(words_list);
-   
+ 
+ 
+  
  });
