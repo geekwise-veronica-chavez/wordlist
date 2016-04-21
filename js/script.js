@@ -44,6 +44,7 @@ input_box.addEventListener("keydown", function(event){
  
  
     };
+    
 var random_bar=document.createElement("input");;
 var mixed_words=[   
     "hit",
@@ -52,14 +53,25 @@ var mixed_words=[
     "hot",
     "get"
     ];
-var shuffle=function(shufflewords){
-    var words = new Array;
-    for(var i=0; i<mixed_words.length; i++){
-        
-    var letter_array; //= mixed_words[i].split('');
+    random_bar=mixed_words[Math.floor(Math.random()*mixed_words.length)];
+     console.log(random_bar);
+     
+     //var letter_array=mixed_words.split('');
+     
+// var shuffle =function(shufflewords){
+//     for(var i=shufflewords.length-1; i>0; i--){
+//         var random_letter=Math.floor(Math.random()*(i+1));
+//         var shuffle=shufflewords[i];
+//         shufflewords[i]=shufflewords[random_letter];
+//     };
+//   if(shufflewords.toString().replace(/\,/gi,'')===mixed_words){
+//       return shuffle(shufflewords);
+//   }else{
+//       return shuffle.toString().replace(/\,/gi,'');
+//   }
        
-     letter_array=mixed_words[i].split('').sort();
-     console.log(letter_array);
+    // letter_array=mixed_words[i].split('').sort();
+     //console.log(letter_array);
   
      
      //console.log(letter_array);
@@ -67,8 +79,8 @@ var shuffle=function(shufflewords){
       
      // return letter_array;
       
-    };
-};
+  
+//};
 
 
 
@@ -76,7 +88,7 @@ var shuffle=function(shufflewords){
 
 document.addEventListener("DOMContentLoaded", function(event){
     
-    shuffle();
+   // shuffle();
     
  document.body.appendChild(random_bar);
  document.body.appendChild(input_box);
